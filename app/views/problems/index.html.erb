@@ -26,7 +26,7 @@ $(document).ready(function() {
 <ol>
 	<% @problems.each do |f| %>
 <div class="toggle-unit">
-	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f) %> (expand)</h2>
+	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand)</h2>
 	<div class="toggle-content">
 		<%= f.description %>
 	</div><!-- /.toggle-content --></li>

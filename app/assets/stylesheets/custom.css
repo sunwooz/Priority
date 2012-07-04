@@ -11,3 +11,12 @@ h2 {
 h1 {
 	font-family: 'IM Fell French Canon SC', serif;
 }
+#problemlink:hover {
+	color:red;
+}
+.navbar li a:hover {
+	color:red;
+}
+a:visited {
+	color:green;
+}
