@@ -1,0 +1,35 @@
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.toggle-content').hide();
+
+	$('.toggle-control')
+	 .addClass('clickable')
+	 .bind('click', function() {
+		var $control = $(this);
+		var $parent = $control.parents('.toggle-unit');
+
+		$parent.toggleClass('expanded');
+		$parent.find('.toggle-content').slideToggle();
+
+		// if control has HTML5 data attributes, use to update text
+		if ($parent.hasClass('expanded')) {
+			$control.html($control.attr('data-expanded-text'));
+		} else {
+			$control.html($control.attr('data-text'));
+		}
+	})
+});
+</script>
+</head>
+<ol>
+	<% @problems.each do |f| %>
+<div class="toggle-unit">
+	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f) %> (expand)</h2>
+	<div class="toggle-content">
+		<%= f.description %>
+	</div><!-- /.toggle-content --></li>
+</div><!-- /.toggle.unit -->
+	<% end %>
+</ol>

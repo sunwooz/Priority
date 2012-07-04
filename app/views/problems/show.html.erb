@@ -1,0 +1,26 @@
+<h1><%= @problem.name %></h1><%= link_to 'Edit', edit_problem_path(@problem) %> <%= link_to 'Destroy', problem_path(@problem), :method => :delete %>
+<p>
+	<%= @problem.description %>
+</p>
+<ol>
+	<% @problem.solutions.each do |s| %>
+	<li><h3><%= s.name %></h3>
+		<p><%= s.notes %></p>
+		<%= link_to 'Edit', edit_problem_solution_path(@problem) %> <%= link_to 'destroy', problem_solution_path(s), :method => :delete %></li>
+	<% end %>
+</ol>
+
+<h1>New Solution</h1>
+<%= form_for [@problem, @solution] do |f| %>
+<p>	
+	<%= f.label :name %><br/>
+	<%= f.text_field :name %>
+</p>
+<p>
+	<%= f.label :notes %><br/>
+	<%= f.text_area :notes %>
+</p>
+<p>
+	<%= f.submit %>
+</p>
+<% end %>
