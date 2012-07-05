@@ -66,3 +66,18 @@ $(document).ready(function() {
 	</ol>
 	<% end %>
 </ol>
+
+	<h1>General Problem</h1>
+	<% @problems.each do |f| %>
+	<% if f.category_id == 4 %>
+	<ol>
+<div class="toggle-unit">
+	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand)</h2>
+	<div class="toggle-content">
+		<%= f.description %>
+	</div><!-- /.toggle-content --></li>
+</div><!-- /.toggle.unit -->
+	<% end %>
+	</ol>
+	<% end %>
+</ol>

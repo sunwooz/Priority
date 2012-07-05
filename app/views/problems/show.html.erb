@@ -6,7 +6,7 @@
 	<% @problem.solutions.each do |s| %>
 	<li><h3><%= s.name %></h3>
 		<p><%= s.notes %></p>
-		<%= link_to 'Edit', edit_problem_solution_path(@problem) %> <%= link_to 'destroy', problem_solution_path(s), :method => :delete %></li>
+		<%= link_to 'Edit', edit_problem_solution_path(@problem, @problem.solutions(s)) %> <%= link_to 'destroy', problem_solution_path(s), :method => :delete %></li>
 	<% end %>
 </ol>
 

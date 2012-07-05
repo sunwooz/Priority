@@ -11,7 +11,7 @@ class SolutionsController < ApplicationController
   
   def show
     @problem = Problem.find(params[:problem_id])
-    @solution = @problem.solutions
+    @solution = @problem.solutions.build
   end
   
   def new
@@ -29,5 +29,17 @@ class SolutionsController < ApplicationController
   end
   
   def edit
+    @solution = Solution.find(params[:id])
+    @problem = Problem.find(params[:problem_id])
+  end
+  
+  def update
+    @problem = Problem.find(params[:problem_id])
+    @solution = Solution.find(params[:id])
+    respond_to do |format|
+      if @solution.update_attributes(params[:solution])
+        format.html { redirect_to @problem }
+      end
+    end
   end
 end
