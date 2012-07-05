@@ -7,7 +7,7 @@ class ProblemsController < ApplicationController
     @problem = Problem.new(params[:problem])
     respond_to do |format|
       if @problem.save
-        format.html { redirect_to root_url }
+        format.html { redirect_to @problem }
       end
     end
   end

@@ -29,7 +29,7 @@ $(document).ready(function() {
 	<% @problems.each do |f| %>
 	<% if f.category_id == 1 %>
 <div class="toggle-unit">
-	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand)</h2>
+	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand) <%= f.solutions.size.to_s %> Solutions</h2>
 	<div class="toggle-content">
 		<%= f.description %>
 	</div><!-- /.toggle-content --></li>
@@ -43,7 +43,7 @@ $(document).ready(function() {
 	<% @problems.each do |f| %>
 	<% if f.category_id == 2 %>
 <div class="toggle-unit">
-	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand)</h2>
+	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand) <%= f.solutions.size.to_s %> Solutions</h2>
 	<div class="toggle-content">
 		<%= f.description %>
 	</div><!-- /.toggle-content --></li>
@@ -57,7 +57,7 @@ $(document).ready(function() {
 	<% @problems.each do |f| %>
 	<% if f.category_id == 3 %>
 <div class="toggle-unit">
-	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand)</h2>
+	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand) <%= f.solutions.size.to_s %> Solutions</h2>
 	<div class="toggle-content">
 		<%= f.description %>
 	</div><!-- /.toggle-content --></li>
@@ -71,7 +71,7 @@ $(document).ready(function() {
 	<% @problems.each do |f| %>
 	<% if f.category_id == 4 %>
 <div class="toggle-unit">
-	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand)</h2>
+	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand) <%= f.solutions.size.to_s %> Solutions</h2>
 	<div class="toggle-content">
 		<%= f.description %>
 	</div><!-- /.toggle-content --></li>
