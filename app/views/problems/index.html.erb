@@ -23,7 +23,6 @@ $(document).ready(function() {
 });
 </script>
 </head>
-
 	<h1>Mobile App</h1>
 	<ol>
 	<% @problems.each do |f| %>
@@ -43,7 +42,7 @@ $(document).ready(function() {
 	<% @problems.each do |f| %>
 	<% if f.category_id == 2 %>
 <div class="toggle-unit">
-	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand) <%= f.solutions.size.to_s %> Solutions</h2>
+	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand) <span id="solutionsize"><%= f.solutions.size.to_s %> Solutions</span></h2>
 	<div class="toggle-content">
 		<%= f.description %>
 	</div><!-- /.toggle-content --></li>
