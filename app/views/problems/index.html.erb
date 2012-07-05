@@ -23,13 +23,46 @@ $(document).ready(function() {
 });
 </script>
 </head>
-<ol>
+
+	<h1>Mobile App</h1>
 	<% @problems.each do |f| %>
+	<% if f.category_id == 1 %>
+	<ol>
 <div class="toggle-unit">
 	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand)</h2>
 	<div class="toggle-content">
 		<%= f.description %>
 	</div><!-- /.toggle-content --></li>
 </div><!-- /.toggle.unit -->
+	<% end %>
+	</ol>
+	<% end %>
+	
+	<h1>Web App</h1>
+	<% @problems.each do |f| %>
+	<% if f.category_id == 2 %>
+	<ol>
+<div class="toggle-unit">
+	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand)</h2>
+	<div class="toggle-content">
+		<%= f.description %>
+	</div><!-- /.toggle-content --></li>
+</div><!-- /.toggle.unit -->
+	<% end %>
+	</ol>
+	<% end %>
+	
+	<h1>Physical Good</h1>
+	<% @problems.each do |f| %>
+	<% if f.category_id == 3 %>
+	<ol>
+<div class="toggle-unit">
+	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand)</h2>
+	<div class="toggle-content">
+		<%= f.description %>
+	</div><!-- /.toggle-content --></li>
+</div><!-- /.toggle.unit -->
+	<% end %>
+	</ol>
 	<% end %>
 </ol>
