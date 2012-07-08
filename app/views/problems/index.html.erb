@@ -28,7 +28,7 @@ $(document).ready(function() {
 	<% @problems.each do |f| %>
 	<% if f.category_id == 1 %>
 <div class="toggle-unit">
-	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand) <span id="solutionsize"><%= f.solutions.size.to_s %> Solutions</span></h2>
+	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> <% if f.description.size > 0 %>(expand)<% end %> <span id="solutionsize"><%= f.solutions.size.to_s %> Solutions</span></h2>
 	<div class="toggle-content">
 		<%= f.description %>
 	</div><!-- /.toggle-content --></li>
@@ -42,7 +42,7 @@ $(document).ready(function() {
 	<% @problems.each do |f| %>
 	<% if f.category_id == 2 %>
 <div class="toggle-unit">
-	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand) <span id="solutionsize"><%= f.solutions.size.to_s %> Solutions</span></h2>
+	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> <% if f.description.size > 0 %>(expand)<% end %> <span id="solutionsize"><%= f.solutions.size.to_s %> Solutions</span></h2>
 	<div class="toggle-content">
 		<%= f.description %>
 	</div><!-- /.toggle-content --></li>
@@ -56,7 +56,7 @@ $(document).ready(function() {
 	<% @problems.each do |f| %>
 	<% if f.category_id == 3 %>
 <div class="toggle-unit">
-	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand) <span id="solutionsize"><%= f.solutions.size.to_s %> Solutions</span></h2>
+	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> <% if f.description.size > 0 %>(expand)<% end %> <span id="solutionsize"><%= f.solutions.size.to_s %> Solutions</span></h2>
 	<div class="toggle-content">
 		<%= f.description %>
 	</div><!-- /.toggle-content --></li>
@@ -70,7 +70,7 @@ $(document).ready(function() {
 	<% @problems.each do |f| %>
 	<% if f.category_id == 4 %>
 <div class="toggle-unit">
-	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> (expand) <span id="solutionsize"><%= f.solutions.size.to_s %> Solutions</span></h2>
+	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> <% if f.description.size > 0 %>(expand)<% end %> <span id="solutionsize"><%= f.solutions.size.to_s %> Solutions</span></h2>
 	<div class="toggle-content">
 		<%= f.description %>
 	</div><!-- /.toggle-content --></li>
