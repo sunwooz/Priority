@@ -30,7 +30,7 @@ $(document).ready(function() {
 <div class="toggle-unit">
 	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> <% if f.description.size > 0 %>(expand)<% end %> <span id="solutionsize"><%= f.solutions.size.to_s %> Solutions</span></h2>
 	<div class="toggle-content">
-		<%= f.description %>
+		<%= markdown(f.description) %>
 	</div><!-- /.toggle-content --></li>
 </div><!-- /.toggle.unit -->
 	<% end %>
@@ -44,7 +44,7 @@ $(document).ready(function() {
 <div class="toggle-unit">
 	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> <% if f.description.size > 0 %>(expand)<% end %> <span id="solutionsize"><%= f.solutions.size.to_s %> Solutions</span></h2>
 	<div class="toggle-content">
-		<%= f.description %>
+		<%= markdown(f.description) %>
 	</div><!-- /.toggle-content --></li>
 </div><!-- /.toggle.unit -->
 	<% end %>
@@ -58,7 +58,7 @@ $(document).ready(function() {
 <div class="toggle-unit">
 	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> <% if f.description.size > 0 %>(expand)<% end %> <span id="solutionsize"><%= f.solutions.size.to_s %> Solutions</span></h2>
 	<div class="toggle-content">
-		<%= f.description %>
+		<%= markdown(f.description) %>
 	</div><!-- /.toggle-content --></li>
 </div><!-- /.toggle.unit -->
 	<% end %>
@@ -72,7 +72,7 @@ $(document).ready(function() {
 <div class="toggle-unit">
 	<li><h2 class="toggle-control"><%= link_to f.name, problem_path(f), :id => 'problemlink'%> <% if f.description.size > 0 %>(expand)<% end %> <span id="solutionsize"><%= f.solutions.size.to_s %> Solutions</span></h2>
 	<div class="toggle-content">
-		<%= f.description %>
+		<%= markdown(f.description) %>
 	</div><!-- /.toggle-content --></li>
 </div><!-- /.toggle.unit -->
 	<% end %>

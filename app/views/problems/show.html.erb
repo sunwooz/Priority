@@ -1,6 +1,6 @@
 <h1><%= @problem.name %></h1><%= link_to 'Edit', edit_problem_path(@problem) %> <%= link_to 'Destroy', problem_path(@problem), :method => :delete %>
 <p>
-	<%= @problem.description %>
+	<%= markdown(@problem.description) %>
 </p>
 <ol>
 	<% @problem.solutions.each do |s| %>
